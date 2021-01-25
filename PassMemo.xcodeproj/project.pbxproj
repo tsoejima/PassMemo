@@ -19,6 +19,7 @@
 		DFAB8DF925BD4350005E30CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFAB8DF725BD4350005E30CE /* LaunchScreen.storyboard */; };
 		DFAB8E0425BD4350005E30CE /* PassMemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAB8E0325BD4350005E30CE /* PassMemoTests.swift */; };
 		DFAB8E0F25BD4350005E30CE /* PassMemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAB8E0E25BD4350005E30CE /* PassMemoUITests.swift */; };
+		DFB49DE725BE9353000C946F /* PassWordRepositoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB49DE625BE9353000C946F /* PassWordRepositoryViewController.swift */; };
 		DFC9480425BD6FE600CA3A3E /* PasscodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9480325BD6FE600CA3A3E /* PasscodeViewController.swift */; };
 		DFC9480B25BDA59C00CA3A3E /* BuckSpaceGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = DFC9480A25BDA59C00CA3A3E /* BuckSpaceGreen.png */; };
 /* End PBXBuildFile section */
@@ -65,6 +66,7 @@
 		DFAB8E0A25BD4350005E30CE /* PassMemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PassMemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFAB8E0E25BD4350005E30CE /* PassMemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassMemoUITests.swift; sourceTree = "<group>"; };
 		DFAB8E1025BD4350005E30CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFB49DE625BE9353000C946F /* PassWordRepositoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassWordRepositoryViewController.swift; sourceTree = "<group>"; };
 		DFC9480325BD6FE600CA3A3E /* PasscodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeViewController.swift; sourceTree = "<group>"; };
 		DFC9480A25BDA59C00CA3A3E /* BuckSpaceGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BuckSpaceGreen.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -173,6 +175,7 @@
 				DFAB8DED25BD434F005E30CE /* ViewController.swift */,
 				DFAB8DF725BD4350005E30CE /* LaunchScreen.storyboard */,
 				DFC9480325BD6FE600CA3A3E /* PasscodeViewController.swift */,
+				DFB49DE625BE9353000C946F /* PassWordRepositoryViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFAB8DEE25BD434F005E30CE /* ViewController.swift in Sources */,
+				DFB49DE725BE9353000C946F /* PassWordRepositoryViewController.swift in Sources */,
 				DFAB8DEA25BD434F005E30CE /* AppDelegate.swift in Sources */,
 				DFC9480425BD6FE600CA3A3E /* PasscodeViewController.swift in Sources */,
 				DFAB8DF425BD434F005E30CE /* PassMemo.xcdatamodeld in Sources */,

@@ -419,6 +419,13 @@
                                     <constraint firstAttribute="bottom" secondItem="vPM-zN-YdH" secondAttribute="bottom" constant="40" id="ix9-m5-Cze"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJj-xa-TBQ">
+                                <rect key="frame" x="174" y="44" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tVd-Uk-uXs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -441,6 +448,7 @@
                         <outlet property="countBatch2" destination="919-8I-XfW" id="bps-sy-3tm"/>
                         <outlet property="countBatch3" destination="DAU-1C-DzK" id="Cth-px-fmc"/>
                         <outlet property="countBatch4" destination="2bT-v9-iW9" id="GtZ-Dh-Abg"/>
+                        <outlet property="debugLabel" destination="EJj-xa-TBQ" id="ZEM-fn-pVr"/>
                         <outlet property="numPad0" destination="W4N-NQ-m9O" id="TJ6-3R-f9O"/>
                         <outlet property="numPad1" destination="smA-fR-ghL" id="4Fa-Sg-Hlm"/>
                         <outlet property="numPad2" destination="Z5h-v3-2oc" id="O5g-IZ-R3V"/>
@@ -457,11 +465,29 @@
             </objects>
             <point key="canvasLocation" x="-636.92307692307691" y="333.41232227488149"/>
         </scene>
+        <!--Pass Word Repository View Controller-->
+        <scene sceneID="Y5l-ju-nVj">
+            <objects>
+                <viewController storyboardIdentifier="PassWordRepositoryViewController" id="Wks-gf-tl5" customClass="PassWordRepositoryViewController" customModule="PassMemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bMN-HK-CS1">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ZFy-tp-w29"/>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kQu-GY-Vkl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="142" y="333"/>
+        </scene>
     </scenes>
     <resources>
         <image name="BuckSpaceGreen.png" width="256" height="256"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

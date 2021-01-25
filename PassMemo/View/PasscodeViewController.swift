@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import RealmSwift
+import LocalAuthentication
 
 class PasscodeViewController: UIViewController {
     
@@ -29,9 +30,53 @@ class PasscodeViewController: UIViewController {
     @IBOutlet weak var numPad8: UIButton!
     @IBOutlet weak var numPad9: UIButton!
     
+    //デバック用ラベル削除予定
+    @IBOutlet weak var debugLabel: UILabel!
+    
+    
     //定数宣言
     let passCord :Int = 0
     var passCordNow :String = ""
+    var batchStetas :Int = 0 {
+        didSet{
+            debugLabel.text = passCordNow
+            print(batchStetas)
+            if batchStetas == 1 {
+                countBatch1.layer.backgroundColor = UIColor(red: 0.549, green: 0.901, blue:0.486, alpha: 1.000).cgColor
+                countBatch2.layer.backgroundColor = UIColor(white: 1, alpha: 1).cgColor
+                countBatch3.layer.backgroundColor = UIColor(white: 1, alpha: 1).cgColor
+                countBatch4.layer.backgroundColor = UIColor(white: 1, alpha: 1).cgColor
+            }
+            else if batchStetas == 2 {
+                countBatch1.layer.backgroundColor = UIColor(red: 0.549, green: 0.901, blue:0.486, alpha: 1.000).cgColor
+                countBatch2.layer.backgroundColor = UIColor(red: 0.549, green: 0.901, blue:0.486, alpha: 1.000).cgColor
+                countBatch3.layer.backgroundColor = UIColor(white: 1, alpha: 1).cgColor
+                countBatch4.layer.backgroundColor = UIColor(white: 1, alpha: 1).cgColor
+                
+            }
+            else if batchStetas == 3 {
+                countBatch1.layer.backgroundColor = UIColor(red: 0.549, green: 0.901, blue:0.486, alpha: 1.000).cgColor
+                countBatch2.layer.backgroundColor = UIColor(red: 0.549, green: 0.901, blue:0.486, alpha: 1.000).cgColor
+                countBatch3.layer.backgroundColor = UIColor(red: 0.549, green: 0.901, blue:0.486, alpha: 1.000).cgColor
+                countBatch4.layer.backgroundColor = UIColor(white: 1, alpha: 1).cgColor
+            }
+            else if batchStetas == 4 {
+                countBatch1.layer.backgroundColor = UIColor(red: 0.549, green: 0.901, blue:0.486, alpha: 1.000).cgColor
+                countBatch2.layer.backgroundColor = UIColor(red: 0.549, green: 0.901, blue:0.486, alpha: 1.000).cgColor
+                countBatch3.layer.backgroundColor = UIColor(red: 0.549, green: 0.901, blue:0.486, alpha: 1.000).cgColor
+                countBatch4.layer.backgroundColor = UIColor(red: 0.549, green: 0.901, blue:0.486, alpha: 1.000).cgColor
+            }
+            else if batchStetas == 0 {
+                countBatch1.layer.backgroundColor = UIColor(white: 1, alpha: 1).cgColor
+                countBatch2.layer.backgroundColor = UIColor(white: 1, alpha: 1).cgColor
+                countBatch3.layer.backgroundColor = UIColor(white: 1, alpha: 1).cgColor
+                countBatch4.layer.backgroundColor = UIColor(white: 1, alpha: 1).cgColor
+                }
+            else{
+                print("Error")
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,42 +90,77 @@ class PasscodeViewController: UIViewController {
         countBatch2.layer.borderColor = UIColor(red: 0.549, green: 0.901, blue:0.486, alpha: 1.000).cgColor
         countBatch3.layer.borderColor = UIColor(red: 0.549, green: 0.901, blue:0.486, alpha: 1.000).cgColor
         countBatch4.layer.borderColor = UIColor(red: 0.549, green: 0.901, blue:0.486, alpha: 1.000).cgColor
-        // Do any additional setup after loading the view.
+        
+        let context = LAContext()
+            let reason = "This app uses Touch ID / Facd ID to secure your data."
+            var authError: NSError?
+            
+            if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &authError) {
+              context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { (success, error) in
+                if success {
+                    self.goNext()
+                } else {
+                  print("Error")
+                }
+              }
+            } else {
+            }
     }
     
     @IBAction func numPadAcction0(_ sender: Any) {
         passCordNow += "0"
+        batchStetas += 1
     }
     @IBAction func numPadAcction1(_ sender: Any) {
         passCordNow += "1"
+        batchStetas += 1
     }
     @IBAction func numPadAcction2(_ sender: Any) {
         passCordNow += "2"
+        batchStetas += 1
     }
     @IBAction func numPadAcction3(_ sender: Any) {
         passCordNow += "3"
+        batchStetas += 1
     }
     @IBAction func numPadAcction4(_ sender: Any) {
         passCordNow += "4"
+        batchStetas += 1
     }
     @IBAction func numPadAcction5(_ sender: Any) {
         passCordNow += "5"
+        batchStetas += 1
     }
     @IBAction func numPadAcction6(_ sender: Any) {
         passCordNow += "6"
+        batchStetas += 1
     }
     @IBAction func numPadAcction7(_ sender: Any) {
         passCordNow += "7"
+        batchStetas += 1
     }
     @IBAction func numPadAcction8(_ sender: Any) {
         passCordNow += "8"
+        batchStetas += 1
     }
     @IBAction func numPadAcction9(_ sender: Any) {
         passCordNow += "9"
+        batchStetas += 1
     }
     @IBAction func numPadAcctionBackSpace(_ sender: Any) {
         passCordNow = String(passCordNow.dropLast())
+        batchStetas -= 1
+        if batchStetas < 0 {
+            batchStetas = 0
+        }
     }
+    func goNext(){
+        DispatchQueue.main.sync {
+        let passWordRepositoryViewController = self.storyboard?.instantiateViewController(withIdentifier: "PassWordRepositoryViewController") as! PassWordRepositoryViewController
+        self.present(passWordRepositoryViewController, animated: true, completion: nil)
+        }
+    }
+
     
     
 
