@@ -20,6 +20,8 @@
 		DFAB8E0425BD4350005E30CE /* PassMemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAB8E0325BD4350005E30CE /* PassMemoTests.swift */; };
 		DFAB8E0F25BD4350005E30CE /* PassMemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAB8E0E25BD4350005E30CE /* PassMemoUITests.swift */; };
 		DFB49DE725BE9353000C946F /* PassWordRepositoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB49DE625BE9353000C946F /* PassWordRepositoryViewController.swift */; };
+		DFB49DEC25BEA8EA000C946F /* addPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB49DEB25BEA8EA000C946F /* addPasswordViewController.swift */; };
+		DFB49DF225BEAED8000C946F /* DummyiCon.png in Resources */ = {isa = PBXBuildFile; fileRef = DFB49DF125BEAED8000C946F /* DummyiCon.png */; };
 		DFC9480425BD6FE600CA3A3E /* PasscodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC9480325BD6FE600CA3A3E /* PasscodeViewController.swift */; };
 		DFC9480B25BDA59C00CA3A3E /* BuckSpaceGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = DFC9480A25BDA59C00CA3A3E /* BuckSpaceGreen.png */; };
 /* End PBXBuildFile section */
@@ -67,6 +69,8 @@
 		DFAB8E0E25BD4350005E30CE /* PassMemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassMemoUITests.swift; sourceTree = "<group>"; };
 		DFAB8E1025BD4350005E30CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFB49DE625BE9353000C946F /* PassWordRepositoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassWordRepositoryViewController.swift; sourceTree = "<group>"; };
+		DFB49DEB25BEA8EA000C946F /* addPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addPasswordViewController.swift; sourceTree = "<group>"; };
+		DFB49DF125BEAED8000C946F /* DummyiCon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DummyiCon.png; sourceTree = "<group>"; };
 		DFC9480325BD6FE600CA3A3E /* PasscodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeViewController.swift; sourceTree = "<group>"; };
 		DFC9480A25BDA59C00CA3A3E /* BuckSpaceGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BuckSpaceGreen.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,6 +180,7 @@
 				DFAB8DF725BD4350005E30CE /* LaunchScreen.storyboard */,
 				DFC9480325BD6FE600CA3A3E /* PasscodeViewController.swift */,
 				DFB49DE625BE9353000C946F /* PassWordRepositoryViewController.swift */,
+				DFB49DEB25BEA8EA000C946F /* addPasswordViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -194,9 +199,18 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		DFB49DF025BEAED8000C946F /* Dummyimage */ = {
+			isa = PBXGroup;
+			children = (
+				DFB49DF125BEAED8000C946F /* DummyiCon.png */,
+			);
+			path = Dummyimage;
+			sourceTree = "<group>";
+		};
 		DFC9480825BDA59C00CA3A3E /* image */ = {
 			isa = PBXGroup;
 			children = (
+				DFB49DF025BEAED8000C946F /* Dummyimage */,
 				DFC9480925BDA59C00CA3A3E /* ButtoniCon */,
 			);
 			path = image;
@@ -329,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFAB8DF925BD4350005E30CE /* LaunchScreen.storyboard in Resources */,
+				DFB49DF225BEAED8000C946F /* DummyiCon.png in Resources */,
 				DFAB8DF625BD4350005E30CE /* Assets.xcassets in Resources */,
 				DFAB8DF125BD434F005E30CE /* Main.storyboard in Resources */,
 				DFC9480B25BDA59C00CA3A3E /* BuckSpaceGreen.png in Resources */,
@@ -463,6 +478,7 @@
 				DFB49DE725BE9353000C946F /* PassWordRepositoryViewController.swift in Sources */,
 				DFAB8DEA25BD434F005E30CE /* AppDelegate.swift in Sources */,
 				DFC9480425BD6FE600CA3A3E /* PasscodeViewController.swift in Sources */,
+				DFB49DEC25BEA8EA000C946F /* addPasswordViewController.swift in Sources */,
 				DFAB8DF425BD434F005E30CE /* PassMemo.xcdatamodeld in Sources */,
 				DFAB8DEC25BD434F005E30CE /* SceneDelegate.swift in Sources */,
 			);

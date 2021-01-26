@@ -155,7 +155,7 @@ class PasscodeViewController: UIViewController {
         }
     }
     func goNext(){
-        DispatchQueue.main.sync {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
         let passWordRepositoryViewController = self.storyboard?.instantiateViewController(withIdentifier: "PassWordRepositoryViewController") as! PassWordRepositoryViewController
         self.present(passWordRepositoryViewController, animated: true, completion: nil)
         }
